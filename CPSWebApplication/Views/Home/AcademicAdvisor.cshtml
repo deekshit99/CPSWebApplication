@@ -1,0 +1,26 @@
+﻿@model CPSWebApplication.Models.ViewModel.UserModel
+
+@{
+    ViewBag.Title = "AcademicAdvisor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@Model.FirstName</h2>
+<h2>Welcome to AcademicAdvisor Portal </h2>
+
+@using (Html.BeginForm("Create", "AcadAdv"))
+{
+        <div class="container">
+            <h3></h3>
+            <ul class="nav nav-pills">
+                <li class="active">
+                    <button type="button" class="btn btn-default" onclick="window.location = ('@Url.Action("DesignCPS","AcademicAdvisor")')">Design CPS</button></li>
+                <li><button type="button" class="btn btn-default" onclick="window.location = ('@Url.Action("GenerateCPS","AcademicAdvisor")')">Generate CPS</button></li>
+                <li><button type="button" class="btn btn-default" onclick="window.location = ('@Url.Action("ModifyCPS","AcademicAdvisor")')">Modify CPS</button></li>
+                <li><button type="button" class="btn btn-default" onclick="window.location = ('@Url.Action("ModifyCPS","AcademicAdvisor")')">Modify CPS</button></li>
+                <li><button type="button" class="btn btn-default" onclick="window.location = ('@Url.Action("AduitCPS","AcademicAdvisor")')">Audit CPS</button></li>
+            </ul>
+        </div> 
+}
+
+
+<div>@Html.ActionLink("LogOut", "LogOut", "Account")</div>

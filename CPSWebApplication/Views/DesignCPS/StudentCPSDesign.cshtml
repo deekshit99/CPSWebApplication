@@ -1,0 +1,97 @@
+﻿@model CPSWebApplication.Models.ViewModel.DesignCPSViewModel
+
+@{
+    ViewBag.Title = "StudentCPSDesign";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>StudentCPSDesign</h2>
+<p> @Session["UserName"].ToString() You are welcome on designing student page</p>
+
+@using (Html.BeginForm("StudentCPSDesignTest", "DesignCPS", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(model => model.lastName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.lastName, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        @Html.LabelFor(model => model.majorName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.majorName, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        @Html.LabelFor(model => model.academicYear, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.academicYear, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+    </div>
+    <div class="form-group" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <h4>Foundation Courses:</h4>
+        <div>
+            <table id="cphMainContent_dgvUsers" class="table table-hover table-striped"
+                   cellspacing="0" style="border-collapse:collapse;">
+                <tbody>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col">Credits</th>
+                    </tr>
+                    @for (int i = 0; i < Model.FoundationClassesList.Count(); i++)
+                {
+
+                        <tr class="cursor-pointer">
+                            <td>
+                                @Html.CheckBoxFor(x => x.FoundationClassesList[i].IsSelected)
+                                @Model.FoundationClassesList[i].CourseShortName
+                            </td>
+                            <td>@Model.FoundationClassesList[i].CourseFullName</td>
+                            <td>@Model.FoundationClassesList[i].CreditHrs</td>
+                        </tr>
+
+
+                        //If you need to hide any values and get them in your post
+                        //  @Html.HiddenFor(x => x.FoundationClassesList[i].Id)
+                        //  @Html.HiddenFor(x => x.FoundationClassesList[i].)
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <h4>Core Courses:</h4>
+        <table id="cphMainContent_dgvUsers" class="table table-hover table-striped"
+               cellspacing="0" style="border-collapse:collapse;">
+            <tbody>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">Credits</th>
+                    @for (int i = 0; i < Model.CoreClassesList.Count(); i++)
+                    {
+                    <tr class="cursor-pointer">
+                        <td>
+                         
+                            @Model.CoreClassesList[i].CourseShortName
+                        </td>
+                        <td>@Model.CoreClassesList[i].CourseFullName</td>
+                        <td>@Model.CoreClassesList[i].CreditHrs</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+            <br />
+
+            <div>
+                <button name="action" value="save" type="submit" class="btn btn-success"onclick="window.location = ('@Url.Action("","")')">Save</button>
+               
+                <button name="action" value="back" type="submit" class="btn btn-success" onclick="window.location = ('@Url.Action("","")')">Back</button>
+               
+                <a href="javascript:window.print()" class="btn btn-success btn-lg">
+                    <span class="glyphicon glyphicon-print"></span> Print
+                </a>
+          
+            </div>
+        </div>
+}   <div>@Html.ActionLink("LogOut", "LogOut", "Account")</div>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="c533317sp04prakhyanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="APPUser">
+    <Key>
+      <PropertyRef Name="UHCLEmail" />
+    </Key>
+    <Property Name="UHCLEmail" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="UHCLEmailPassword" Type="varchar" MaxLength="100" />
+    <Property Name="UserRole" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="APPUserProfile">
+    <Key>
+      <PropertyRef Name="UHCLID" />
+    </Key>
+    <Property Name="UHCLID" Type="int" Nullable="false" />
+    <Property Name="UHCLIDPassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="200" />
+    <Property Name="LastName" Type="varchar" MaxLength="200" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="100" />
+    <Property Name="UHCLEmail" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="UHCLEmailPassword" Type="varchar" MaxLength="100" />
+    <Property Name="UserAddress" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK__APPUserPr__UHCLE__1B0907CE">
+    <End Role="APPUser" Type="Self.APPUser" Multiplicity="1" />
+    <End Role="APPUserProfile" Type="Self.APPUserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APPUser">
+        <PropertyRef Name="UHCLEmail" />
+      </Principal>
+      <Dependent Role="APPUserProfile">
+        <PropertyRef Name="UHCLEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="c533317sp04prakhyanModelStoreContainer">
+    <EntitySet Name="APPUser" EntityType="Self.APPUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="APPUserProfile" EntityType="Self.APPUserProfile" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__APPUserPr__UHCLE__1B0907CE" Association="Self.FK__APPUserPr__UHCLE__1B0907CE">
+      <End Role="APPUser" EntitySet="APPUser" />
+      <End Role="APPUserProfile" EntitySet="APPUserProfile" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

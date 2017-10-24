@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="c533317sp04prakhyanModel1StoreContainer" CdmEntityContainer="CPSCreationEntities">
+    <EntitySetMapping Name="Catalog16_17">
+      <EntityTypeMapping TypeName="c533317sp04prakhyanModel1.Catalog16_17">
+        <MappingFragment StoreEntitySet="Catalog16_17">
+          <ScalarProperty Name="creditHrs" ColumnName="creditHrs" />
+          <ScalarProperty Name="LongTitle" ColumnName="LongTitle" />
+          <ScalarProperty Name="Catalog" ColumnName="Catalog" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="SWEN" ColumnName="SWEN" />
+          <ScalarProperty Name="CSCI" ColumnName="CSCI" />
+          <ScalarProperty Name="SENG" ColumnName="SENG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSCI_Courses">
+      <EntityTypeMapping TypeName="c533317sp04prakhyanModel1.CSCI_Courses">
+        <MappingFragment StoreEntitySet="CSCI_Courses">
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseLevel" ColumnName="CourseLevel" />
+          <ScalarProperty Name="CreditHrs" ColumnName="CreditHrs" />
+          <ScalarProperty Name="UnderSpecialization" ColumnName="UnderSpecialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DMST_Courses">
+      <EntityTypeMapping TypeName="c533317sp04prakhyanModel1.DMST_Courses">
+        <MappingFragment StoreEntitySet="DMST_Courses">
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseLevel" ColumnName="CourseLevel" />
+          <ScalarProperty Name="CreditHrs" ColumnName="CreditHrs" />
+          <ScalarProperty Name="UnderSpecialization" ColumnName="UnderSpecialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SENG_Courses">
+      <EntityTypeMapping TypeName="c533317sp04prakhyanModel1.SENG_Courses">
+        <MappingFragment StoreEntitySet="SENG_Courses">
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseLevel" ColumnName="CourseLevel" />
+          <ScalarProperty Name="CreditHrs" ColumnName="CreditHrs" />
+          <ScalarProperty Name="UnderSpecialization" ColumnName="UnderSpecialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentDetails">
+      <EntityTypeMapping TypeName="c533317sp04prakhyanModel1.StudentDetail">
+        <MappingFragment StoreEntitySet="StudentDetails">
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="UHCLEmail" ColumnName="UHCLEmail" />
+          <ScalarProperty Name="admittedSemester" ColumnName="admittedSemester" />
+          <ScalarProperty Name="currentSemester" ColumnName="currentSemester" />
+          <ScalarProperty Name="majorName" ColumnName="majorName" />
+          <ScalarProperty Name="CGPA" ColumnName="CGPA" />
+          <ScalarProperty Name="enrolledCoursesAndSemesters" ColumnName="enrolledCoursesAndSemesters" />
+          <ScalarProperty Name="completedCoursesAndGrades" ColumnName="completedCoursesAndGrades" />
+          <ScalarProperty Name="ProgramCompletionType" ColumnName="ProgramCompletionType" />
+          <ScalarProperty Name="AssignedFoundation" ColumnName="AssignedFoundation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SWEN_Courses">
+      <EntityTypeMapping TypeName="c533317sp04prakhyanModel1.SWEN_Courses">
+        <MappingFragment StoreEntitySet="SWEN_Courses">
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseLevel" ColumnName="CourseLevel" />
+          <ScalarProperty Name="CreditHrs" ColumnName="CreditHrs" />
+          <ScalarProperty Name="UnderSpecialization" ColumnName="UnderSpecialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

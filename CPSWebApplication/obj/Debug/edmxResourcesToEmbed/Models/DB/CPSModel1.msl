@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="c533317sp04prakhyanModelStoreContainer" CdmEntityContainer="EserviceDBEntities">
+    <EntitySetMapping Name="APPUsers">
+      <EntityTypeMapping TypeName="c533317sp04prakhyanModel.APPUser">
+        <MappingFragment StoreEntitySet="APPUser">
+          <ScalarProperty Name="UHCLEmail" ColumnName="UHCLEmail" />
+          <ScalarProperty Name="UHCLEmailPassword" ColumnName="UHCLEmailPassword" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPUserProfiles">
+      <EntityTypeMapping TypeName="c533317sp04prakhyanModel.APPUserProfile">
+        <MappingFragment StoreEntitySet="APPUserProfile">
+          <ScalarProperty Name="UHCLID" ColumnName="UHCLID" />
+          <ScalarProperty Name="UHCLIDPassword" ColumnName="UHCLIDPassword" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="UHCLEmail" ColumnName="UHCLEmail" />
+          <ScalarProperty Name="UHCLEmailPassword" ColumnName="UHCLEmailPassword" />
+          <ScalarProperty Name="UserAddress" ColumnName="UserAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,33 @@
+﻿@model CPSWebApplication.Models.ViewModel.DesignCPSViewModel
+
+@{
+    ViewBag.Title = "DesignCPS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>DesignCPS</h2>
+<br />
+<br />
+
+<p> @Session["UserName"].ToString() Let's Start design</p>
+    
+
+@if (TempData["Message"] != null)
+{<div>@TempData["Message"]</div>}
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.searchId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.searchId, new { htmlAttributes = new { @class = "form-control" } })   
+            @Html.ValidationMessageFor(model => model.searchId, "", new { @class = "text-danger" })
+           <br />
+            <button type="submit" class="btn btn-default" onclick="window.location = ('@Url.Action("StudentCPSDesign","DesignCPSController")')">Search <span class="glyphicon glyphicon-search"></span></button>
+            <br />
+        </div>
+        </div>
+}
+<div>@Html.ActionLink("LogOut", "LogOut", "Account")</div>
+

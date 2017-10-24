@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="c533317sp04prakhyanModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Catalog16_17">
+    <Key>
+      <PropertyRef Name="Course" />
+    </Key>
+    <Property Name="Course" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="SWEN" Type="varchar" MaxLength="40" />
+    <Property Name="CSCI" Type="varchar" MaxLength="40" />
+    <Property Name="SENG" Type="varchar" MaxLength="40" />
+    <Property Name="Subject" Type="varchar" MaxLength="20" />
+    <Property Name="Catalog" Type="varchar" MaxLength="20" />
+    <Property Name="LongTitle" Type="varchar" MaxLength="50" />
+    <Property Name="creditHrs" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CSCI_Courses">
+    <Key>
+      <PropertyRef Name="Course" />
+    </Key>
+    <Property Name="Course" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CourseName" Type="varchar" MaxLength="70" />
+    <Property Name="CourseLevel" Type="varchar" MaxLength="50" />
+    <Property Name="CreditHrs" Type="int" />
+    <Property Name="UnderSpecialization" Type="varchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="DMST_Courses">
+    <Key>
+      <PropertyRef Name="Course" />
+    </Key>
+    <Property Name="Course" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CourseName" Type="varchar" MaxLength="70" />
+    <Property Name="CourseLevel" Type="varchar" MaxLength="50" />
+    <Property Name="CreditHrs" Type="int" />
+    <Property Name="UnderSpecialization" Type="varchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="SENG_Courses">
+    <Key>
+      <PropertyRef Name="Course" />
+    </Key>
+    <Property Name="Course" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CourseName" Type="varchar" MaxLength="70" />
+    <Property Name="CourseLevel" Type="varchar" MaxLength="50" />
+    <Property Name="CreditHrs" Type="int" />
+    <Property Name="UnderSpecialization" Type="varchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="StudentDetails">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="firstName" Type="varchar" MaxLength="50" />
+    <Property Name="lastName" Type="varchar" MaxLength="50" />
+    <Property Name="studentID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UHCLEmail" Type="varchar" MaxLength="30" />
+    <Property Name="admittedSemester" Type="varchar" MaxLength="20" />
+    <Property Name="currentSemester" Type="varchar" MaxLength="20" />
+    <Property Name="majorName" Type="varchar" MaxLength="40" />
+    <Property Name="CGPA" Type="varchar" MaxLength="10" />
+    <Property Name="enrolledCoursesAndSemesters" Type="varchar" MaxLength="200" />
+    <Property Name="completedCoursesAndGrades" Type="varchar" MaxLength="200" />
+    <Property Name="ProgramCompletionType" Type="varchar" MaxLength="50" />
+    <Property Name="AssignedFoundation" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SWEN_Courses">
+    <Key>
+      <PropertyRef Name="Course" />
+    </Key>
+    <Property Name="Course" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CourseName" Type="varchar" MaxLength="70" />
+    <Property Name="CourseLevel" Type="varchar" MaxLength="50" />
+    <Property Name="CreditHrs" Type="int" />
+    <Property Name="UnderSpecialization" Type="varchar" MaxLength="70" />
+  </EntityType>
+  <EntityContainer Name="c533317sp04prakhyanModel1StoreContainer">
+    <EntitySet Name="Catalog16_17" EntityType="Self.Catalog16_17" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CSCI_Courses" EntityType="Self.CSCI_Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DMST_Courses" EntityType="Self.DMST_Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SENG_Courses" EntityType="Self.SENG_Courses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentDetails" EntityType="Self.StudentDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SWEN_Courses" EntityType="Self.SWEN_Courses" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
