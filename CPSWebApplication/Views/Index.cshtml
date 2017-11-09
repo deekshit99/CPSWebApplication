@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CPSWebApplication.Models.DB.StudentDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>View Student CPS</h2>
+
+<!--<p>
+    @Html.ActionLink("Create New", "Create")
+</p>-->
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.studentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UHCLEmail)
+        </th>
+        
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.studentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UHCLEmail)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.studentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.studentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.studentID })
+        </td>
+    </tr>
+}
+
+</table>

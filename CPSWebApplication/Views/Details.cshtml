@@ -1,0 +1,106 @@
+﻿@model CPSWebApplication.Models.DB.StudentDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UHCLEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UHCLEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admittedSemester)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admittedSemester)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currentSemester)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentSemester)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.majorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.majorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CGPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CGPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.enrolledCoursesAndSemesters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enrolledCoursesAndSemesters)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.completedCoursesAndGrades)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.completedCoursesAndGrades)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgramCompletionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgramCompletionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedFoundation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignedFoundation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.studentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
